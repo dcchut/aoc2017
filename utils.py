@@ -149,6 +149,9 @@ class Graph:
         node.graph = self
         self.nodes.add(node)
 
+    def add_edge_by_node(self, s, t, weight=1):
+        self.add_edge(Edge(s,t,weight))
+
     def add_edge(self, e):
         self.edges[e.s].add(e)
 
