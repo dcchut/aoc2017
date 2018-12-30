@@ -36,9 +36,3 @@ while steps < 12586542:
     steps += 1
 
 print('Part 1:', sum(list(tape.values())))
-
-#Begin in state A.
-#Perform a diagnostic checksum after 12586542 steps.
-
-
-print(rules)
