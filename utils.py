@@ -140,6 +140,14 @@ class Graph:
     nodes = set()
     edges = defaultdict(set)
 
+    def __repr__(self):
+        s = 'Graph\nNodes:'
+        s += str(self.nodes)
+        s += '\nEdges:'
+        s += str(self.edges)
+
+        return s
+
     def add_nodes(self, nodes):
         for node in nodes:
             self.add_node(node)
@@ -161,7 +169,7 @@ class Graph:
 
     # get all nodes that can be reached via a single edge from src node
     def get_neighbours(self, src):
-        return (edge.t for edge in self.edges[src])
+        return [edge.t for edge in self.edges[src]]
 
     # get all edges that start at src node
     def get_edges(self, src):
